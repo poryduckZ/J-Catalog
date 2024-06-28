@@ -20,6 +20,11 @@ public class BookController {
         return bookService.viewBookList();
     }
 
+    @GetMapping("{isbn}")
+    public Book getByIsbn(@PathVariable String isbn) {
+        return bookService.viewBookDetails(isbn);
+    }
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Book post(@Valid @RequestBody Book book) {
