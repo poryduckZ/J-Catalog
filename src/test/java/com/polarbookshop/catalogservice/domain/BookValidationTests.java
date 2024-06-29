@@ -45,6 +45,5 @@ public class BookValidationTests {
         assertThat(violations.iterator().next().getMessage())
                 .isEqualTo("The ISBN format must be valid.");
     }
-
-
+    
 }
